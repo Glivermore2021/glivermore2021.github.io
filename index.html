@@ -1,8 +1,197 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griffin Livermore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto Mono', monospace; /* Universal font */
+            background-color: #000; /* True black background */
+            color: #ddd; /* Light text */
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(45deg, #1b1b1b, #800000, #1b1b1b); /* Black to red to black gradient at 45 degrees */
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow to enhance the 3D effect */
+        }
+        header h1 {
+            margin: 0;
+            color: #f0f0f0;
+            font-size: 2.5em;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* 3D text effect */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #111; /* Darker than true black */
+            padding: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ddd; /* Light text */
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00; /* Hover color */
+        }
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section {
+            margin-bottom: 60px;
+            padding: 20px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.9); /* Slightly lighter than true black */
+            scroll-margin-top: 80px; /* Adjust this value to match the height of your header */
+        }
+        .section h2 {
+            margin-top: 0;
+            font-size: 1.8em;
+            color: #ffcc00; /* Highlighted section titles */
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #333; /* Darker border */
+            border-radius: 4px;
+            background-color: #111; /* Darker than true black */
+            color: #ddd; /* Light text */
+            font-size: 1em;
+        }
+        .contact-form button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #800000;
+            color: #f0f0f0;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #ffcc00; /* Hover color */
+            color: #1b1b1b; /* Dark text on hover */
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            align-items: center; /* Center align items vertically */
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #ddd; /* Light text */
+            font-size: 1em; /* Adjust font size */
+            transition: color 0.3s;
+            text-decoration: none; /* Remove default underline */
+        }
+        .social-links a:hover {
+            color: #ffcc00; /* Hover color */
+        }
+        footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: #f0f0f0;
+        }
+        a {
+            color: #ffcc00;
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            nav a {
+                margin: 0 10px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .section {
+                scroll-margin-top: 60px; /* Adjust for smaller screens */
+            }
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<a href="hehe.html">hehe</a>
+
+<header>
+    <h1>Griffin Livermore</h1>
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#social">Social Media</a> <!-- Added link to social media section -->
+</nav>
+
+<div class="content">
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hi, I'm Griffin Livermore. I'm a programmer with a passion for creating innovative software solutions. My work spans various domains including web development, data analysis, and automation.</p>
+    </section>
+
+    <section id="blog" class="section">
+        <h2>Blog</h2>
+        <p>Welcome to my blog. Here, I share insights on programming, technology trends, and personal projects. Stay tuned for updates!</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <form class="contact-form" action="mailto:glivermore2021@outlook.com" method="post" enctype="text/plain">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <section id="social" class="section">
+        <h2>Social Media</h2>
+        <div class="social-links">
+            <a href="https://github.com/glivermore2021" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+            <!-- Add more social media links as needed -->
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 Griffin Livermore. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
